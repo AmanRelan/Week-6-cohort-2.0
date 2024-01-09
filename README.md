@@ -10,3 +10,6 @@
 - Hooks
 - useEffect hook
 - Polling from server every `X` seconds
+- useEffect
+- useMemo
+- useCallback

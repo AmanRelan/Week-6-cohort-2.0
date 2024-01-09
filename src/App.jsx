@@ -9,11 +9,27 @@ import TodoWithId from "./components/TodoWithId";
 // import TodosFromServer from "./components/TodosFromServer";
 import { useState } from "react";
 import UseMemoHookExample from "./components/useMemoHookExample";
+import BusinessCard from "./components/BusinessCard";
+import SolutionBusinessCard from "./components/SolutionBusinessCard";
 
 function App() {
   const [selectedTodoId, setSelectedTodoId] = useState(1);
   return (
     <>
+      <div className="week-5-assignment">
+        <h1>Business Card</h1>
+        <BusinessCard />
+      </div>
+      <div className="solution-business-card">
+        <h1>Solution Business Card</h1>
+        <SolutionBusinessCard
+          name="Aman Relan"
+          description="Node.js developer with 4+ years Of experience"
+          interests={["React.js", "Node.js", "Web Dev"]}
+          linkedin="linkedin.com/in/aman-relan"
+          twitter="twitter.com/AmanRelan"
+        />
+      </div>
       <div className="week-6.2" style={{ margin: 30 }}>
         <h1>Week 6.2</h1>
         <h3>Use Memo Hook Example</h3>
