@@ -4,6 +4,6 @@ function Todo({ title, description }) {
       <h1>{title}</h1>
       <h4>{description}</h4>
     </div>
-  )
+  );
 }
-export default Todo
+export default Todo;
