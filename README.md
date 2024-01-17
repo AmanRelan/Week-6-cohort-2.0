@@ -13,3 +13,8 @@
 - useEffect
 - useMemo
 - useCallback
+
+# Pending to do
+
+Starbucks Rewards Page Clone
+Reference - [Starbucks Rewards Page Clone](https://www.frontendpractice.com/projects/starbucks)
