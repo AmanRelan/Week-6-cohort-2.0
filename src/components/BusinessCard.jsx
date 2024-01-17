@@ -13,7 +13,7 @@ You have to create a simple React App which has a reusable Card Component which 
     - Give the feature to perform CRUD operations from the frontend (Can be restricted to the admin only as well)
 */
 
-const BusinessCard = () => {
+const BusinessCard = ({ name, description, interests, linkedin, twitter }) => {
   return (
     <div
       style={{
@@ -26,45 +26,28 @@ const BusinessCard = () => {
       <div
         style={{ display: "flex", flexDirection: "column", marginBottom: 0 }}
       >
-        <h1 style={{ paddingLeft: "15px", marginBottom: 0 }}>Aman Relan</h1>
+        <h1 style={{ paddingLeft: "15px", marginBottom: 0 }}>{name}</h1>
         <p style={{ paddingLeft: "15px", marginTop: 0, marginBottom: "5px" }}>
-          Node.js Developer with 4+ years of Experience
+          {description}
         </p>
       </div>
       <div>
         <h3 style={{ margin: 0, paddingLeft: "15px", marginBottom: 0 }}>
           Interests
         </h3>
-        <p
-          style={{
-            margin: 0,
-            paddingLeft: "15px",
-            marginBottom: "4px",
-            marginTop: "4px",
-          }}
-        >
-          Web Dev
-        </p>
-        <p
-          style={{
-            margin: 0,
-            paddingLeft: "15px",
-            marginBottom: "4px",
-            marginTop: "4px",
-          }}
-        >
-          React
-        </p>
-        <p
-          style={{
-            margin: 0,
-            paddingLeft: "15px",
-            marginBottom: "4px",
-            marginTop: "4px",
-          }}
-        >
-          Node
-        </p>
+        {interests.map((interest) => (
+          <p
+            key={interest}
+            style={{
+              margin: 0,
+              paddingLeft: "15px",
+              marginBottom: "4px",
+              marginTop: "4px",
+            }}
+          >
+            {interest}
+          </p>
+        ))}
       </div>
       <div
         style={{
@@ -75,7 +58,10 @@ const BusinessCard = () => {
           marginTop: "10px",
         }}
       >
-        <button
+        <a
+          href={linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             backgroundColor: "#24a0ed",
             color: "#ffffff",
@@ -88,22 +74,11 @@ const BusinessCard = () => {
           }}
         >
           Linkedin
-        </button>
-        <button
-          style={{
-            backgroundColor: "#24a0ed",
-            color: "#ffffff",
-            padding: "15px",
-            textAlign: "center",
-            borderColor: "#24a0ed",
-            borderRadius: "5px",
-            fontSize: "15px",
-            fontWeight: "normal",
-          }}
-        >
-          Github
-        </button>
-        <button
+        </a>
+        <a
+          href={twitter}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             backgroundColor: "#24a0ed",
             color: "#ffffff",
@@ -116,7 +91,7 @@ const BusinessCard = () => {
           }}
         >
           Twitter
-        </button>
+        </a>
       </div>
     </div>
   );

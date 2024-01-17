@@ -18,7 +18,13 @@ function App() {
     <>
       <div className="week-5-assignment">
         <h1>Business Card</h1>
-        <BusinessCard />
+        <BusinessCard
+          name="Aman Relan"
+          description="Node.js developer with 4+ years Of experience"
+          interests={["React.js", "Node.js", "Web Dev"]}
+          linkedin="linkedin.com/in/aman-relan"
+          twitter="twitter.com/AmanRelan"
+        />
       </div>
       <div className="solution-business-card">
         <h1>Solution Business Card</h1>
